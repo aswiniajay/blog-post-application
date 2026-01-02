@@ -1,0 +1,15 @@
+<h1>{{ post.title }}</h1>
+
+<p><strong>Author:</strong> {{ post.author }}</p>
+<p>
+    Created: {{ post.created_date }} <br>
+    Updated: {{ post.updated_date }}
+</p>
+
+{% if post.image %}
+    <img src="{{ post.image.url }}" width="300">
+{% endif %}
+
+<p>{{ post.content }}</p>
+
+<a href="{% url 'post_list' %}">Back to Blog List</a>
